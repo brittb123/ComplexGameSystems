@@ -12,6 +12,16 @@
 UCLASS()
 class PROGRAMMINGDEMO_API AFirstAIController : public AAIController
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
+
+    AFirstAIController();
+    
+    virtual void BeginPlay() override;
+
+    virtual void Posses(APawn* pawn);
+
+    virtual void Tick(float deltaTime) override;
+
+
 
 };
