@@ -41,11 +41,33 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void MoveRight(float AxisValue);
+	
+	UFUNCTION(BlueprintCallable)
+	void DrainNeeds();
+
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
+	float Hunger;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
+	float Thirst;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
+	float Sleep;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Needs")
+	float Hygiene;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Time Management");
+	float OriginalTimer;
+
+	
 
 private:
 	bool bIsMovingX = false;
 	bool bIsMovingY = false;
 
-	
+	float Timer;
 
 };
