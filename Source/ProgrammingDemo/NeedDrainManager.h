@@ -30,6 +30,22 @@ public:
 	UFUNCTION(BlueprintCallable)
 	float DrainSocial(float SocialPercent, float drainPerTick);
 
+	UFUNCTION(BlueprintCallable)
+	bool IsHungerTooLow(float NumberThatIsLow);
+
+	UFUNCTION(BlueprintCallable)
+	bool IsThirstTooLow(float ThirstThatIsLow);
+
+	UFUNCTION(BlueprintCallable)
+	bool IsSleepTooLow(float SleepThatIsLow);
+
+	UFUNCTION(BlueprintCallable)
+	bool IsHygieneTooLow(float HygieneThatIsLow);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Low Needs")
+	bool IsHungerLow;
+
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -37,5 +53,17 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+private:
+
+	float Sleepiness;
+
+	float Hunger;
+
+	float Water;
+
+	float Hygiene;
+
+
 
 };
