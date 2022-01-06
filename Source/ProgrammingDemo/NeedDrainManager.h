@@ -15,6 +15,21 @@ public:
 	// Sets default values for this actor's properties
 	ANeedDrainManager();
 
+	UFUNCTION(BlueprintCallable)
+	float DrainHunger(float HungerPercent, float drainPerTick);
+
+	UFUNCTION(BlueprintCallable)
+	float DrainThirst(float ThirstPercent, float drainPerTick);
+
+	UFUNCTION(BlueprintCallable)
+	float DrainSleep(float SleepPercent, float drainPerTick);
+
+	UFUNCTION(BlueprintCallable)
+	float DrainHygiene(float HygienePercent, float drainPerTick);
+
+	UFUNCTION(BlueprintCallable)
+	float DrainSocial(float SocialPercent, float drainPerTick);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

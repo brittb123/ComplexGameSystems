@@ -11,6 +11,36 @@ ANeedDrainManager::ANeedDrainManager()
 
 }
 
+float ANeedDrainManager::DrainHunger(float HungerPercent, float drainPerTick)
+{	
+	HungerPercent -= drainPerTick;
+	return HungerPercent;
+}
+
+float ANeedDrainManager::DrainThirst(float ThirstPercent, float drainPerTick)
+{
+	ThirstPercent -= drainPerTick;
+	return ThirstPercent;
+}
+
+float ANeedDrainManager::DrainSleep(float SleepPercent, float drainPerTick)
+{
+	SleepPercent -= drainPerTick;
+	return SleepPercent;
+}
+
+float ANeedDrainManager::DrainHygiene(float HygienePercent, float drainPerTick)
+{
+	HygienePercent -= drainPerTick;
+	return HygienePercent;
+}
+
+float ANeedDrainManager::DrainSocial(float SocialPercent, float drainPerTick)
+{
+	SocialPercent -= drainPerTick;
+	return SocialPercent;
+}
+
 // Called when the game starts or when spawned
 void ANeedDrainManager::BeginPlay()
 {

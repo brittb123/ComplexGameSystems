@@ -43,7 +43,7 @@ public:
 	void MoveRight(float AxisValue);
 	
 	UFUNCTION(BlueprintCallable)
-	void DrainNeeds();
+	float DrainHunger(float HungerPercent, float drainPerTick);
 
 
 public:
