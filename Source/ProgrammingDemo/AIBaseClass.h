@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "BedActor.h"
-#include "MyBedActor.generated.h"
+#include "MyCharacter.h"
+#include "AIBaseClass.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class PROGRAMMINGDEMO_API AMyBedActor : public ABedActor
+class PROGRAMMINGDEMO_API AAIBaseClass : public AMyCharacter
 {
 	GENERATED_BODY()
 	
