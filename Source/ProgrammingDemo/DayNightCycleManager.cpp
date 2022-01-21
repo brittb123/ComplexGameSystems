@@ -23,11 +23,13 @@ void ADayNightCycleManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	// If the directional light is not null, rotates the light by its turn rate
 	if (SunLight)
 	{
 		SunLight->AddActorLocalRotation(FRotator((DeltaTime * TurnRate), 0, 0));
 	}
 
+	// If the sky sphere is not null, it calls a function to update the sun position
 	if (sun)
 	{
 		FOutputDeviceNull ar;

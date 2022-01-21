@@ -63,11 +63,6 @@ void AMyCharacter::MoveRight(float AxisValue)
 	bUseControllerRotationYaw = bIsMovingX || bIsMovingY;
 }
 
-float AMyCharacter::DrainHunger(float HungerPercent, float drainPerTick)
-{
-	HungerPercent -= drainPerTick;
-	return HungerPercent;
-}
 
 
 
