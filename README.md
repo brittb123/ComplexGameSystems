@@ -4,4 +4,4 @@ This project is a complex systems of artificial intelligence being used to show 
 
 # How to use this project?
 
-Download the latest release for the build files.
+Download the latest release for the source code of the project. This source code will be used to open the project containing the behavior tree.
